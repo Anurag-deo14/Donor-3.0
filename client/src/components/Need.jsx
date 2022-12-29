@@ -41,7 +41,7 @@ const Need = () => (
 
       </div>
 
-      <div className="flex flex-1 flex-col justify-end justify-items-end px-10">
+      <div className="flex flex-col px-20">
         <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
           Need For
           <br />
