@@ -5,7 +5,7 @@ import file2 from "../../images/file2.png";
 const Map = () => {
   return (
     <div  id='map'>
-                  <h3 className="text-white text-3xl text-center my-2">
+                  <h3 className="text-white text-3xl text-center my-10">
                   Cryptocurrency World Map – Search Interest by Country
           </h3>
           <div className='lg:px-[10rem] px-[1rem] '>
