@@ -9,7 +9,7 @@ const Map = () => {
                   Cryptocurrency World Map – Search Interest by Country
           </h3>
           <div className='lg:px-[10rem] px-[1rem] '>
-          <img className='py-[1rem]' src={file1} alt="" />
+          <img className='my-[1rem]' src={file1} alt="" />
             <img className='my-[1rem]' src={file2} alt="" />
           </div>
             
