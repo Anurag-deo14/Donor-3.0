@@ -33,14 +33,15 @@ const Need = () => (
         </div>
       </div>
       <div className="p-0 pt-2 m-3 w-full flex flex-col justify-start items-center blue-glassmorphism">
-      <HiOutlineReceiptTax fontSize={35} className="text-yellow-600" />
+        <GiDivergence fontSize={35} className="text-blue-600" />
+      
       <button type="button" style={mystyle}> Crypto Donations Help Diversify Nonprofit Revenue Streams</button>
         <div class="content" style={mystyle2}>
           <p>crypto helps your organization become less reliant on one or two main methods of fundraising. You’ll have another donor base to connect with and further opportunities to fundraise, providing options no matter the time of year or what’s happening in the world.</p>
         </div>
       </div>
       <div className="p-0 pt-2 m-3 w-full flex flex-col justify-start items-center blue-glassmorphism">
-      <GiDivergence fontSize={35} className="text-blue-600" />
+      <HiOutlineReceiptTax fontSize={35} className="text-yellow-600" />
       <button type="button" style={mystyle}>Crypto Charitable Giving Is Highly Tax-Efficient</button>
         <div class="content" style={mystyle2}>
           <p>Donating crypto is a very tax-friendly way to give charitably. Crypto is considered a property by the IRS for tax purposes, meaning that crypto donations are treated similar to stock donations. As a result, crypto donors often aren’t responsible for paying capital gains taxes on their donated cryptocurrency.</p>
