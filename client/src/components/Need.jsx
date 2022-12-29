@@ -22,7 +22,17 @@ const Need = () => (
   <div className="flex w-full justify-center items-center gradient-bg-services" id="need">
     <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
 
-
+    <div className="flex flex-col px-20">
+        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
+          Need For
+          <br />
+          Crypto Donation
+        </h1>
+        <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
+        
+        </p>
+      </div>
+      
       <div className="flex-1 flex flex-col justify-start items-center">
         
       <div className="p-0 pt-2 m-3 w-full flex flex-col justify-start items-center blue-glassmorphism">
@@ -50,16 +60,7 @@ const Need = () => (
 
       </div>
 
-      <div className="flex flex-col px-20">
-        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
-          Need For
-          <br />
-          Crypto Donation
-        </h1>
-        <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
-        
-        </p>
-      </div>
+
     </div>
   </div>
 );
