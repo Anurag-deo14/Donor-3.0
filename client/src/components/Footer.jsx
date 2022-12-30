@@ -9,10 +9,11 @@ const Footer = () => (
         <img src={logo} alt="logo" className="w-32" />
       </div>
       <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Donate</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Our Mission</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">The Need</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Countries</p>
+        <a href="#welcome"><p className="text-white text-base text-center mx-2 cursor-pointer">Donate</p></a>
+        <a href="#services"><p className="text-white text-base text-center mx-2 cursor-pointer">Services</p></a>
+        <a href="#need"><p className="text-white text-base text-center mx-2 cursor-pointer">Need</p></a>
+        <a href="#transactions"><p className="text-white text-base text-center mx-2 cursor-pointer">Transactions</p></a>
+        <a href="#map"><p className="text-white text-base text-center mx-2 cursor-pointer">Map</p></a>
       </div>
     </div>
 
