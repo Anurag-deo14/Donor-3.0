@@ -2,8 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import {HiMenuAlt4} from 'react-icons/hi'
 import {AiOutlineClose} from 'react-icons/ai'
-import logo from '../../images/logod.png'
+import logo0 from '../../src/assets/Logo0.png'
 
+const yoboi = {
+  height:"50px"
+}
 
 const NavbarItem = ( {title, classprops}) => {
    return(
@@ -17,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-4 fixed z-50 " style={{backgroundImage:"linear-gradient(to right, rgb(16, 15, 21) 25%, rgb(47, 62, 106)57%, rgb(114, 39, 65) 90%)", boxShadow:"2px 2px 5px 3px #1A1110"}}>
      <div className='md:flex-[0.5] flex-initial justify-center items-center'>
-        <img src={logo} className="w-32 cursor-pointer"/>
+        <img src={logo0} className="cursor-pointer" style={yoboi}/>
      </div>
      <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
        {/* {["Donate","Our Mission","The Need","Countries"].map((item,index) => (
