@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
-import { MdSmartButton } from "react-icons/md";
+
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
@@ -43,14 +43,14 @@ const Welcome = () => {
    }
 
   return (
-    <div className="flex w-full justify-center items-center pt-16 lg:pt-20 " id="welcome">
+    <div className="flex w-full justify-center items-center">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
           <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
             The World  <br /> needs your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face.
+            Donate crypto for the needy using Donor. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face.
           </p>
           {!currentAccount && (
             <button
@@ -89,7 +89,7 @@ const Welcome = () => {
     }}>
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
-                <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
+                <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center" id="pay">
                   <SiEthereum fontSize={21} color="#fff" />
                 </div>
                 <BsInfoCircle fontSize={17} color="#fff" />
@@ -104,10 +104,11 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism" >
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Amount (ETH)" name="amount" type="number" value={num} handleChange={handleChange} onChange={handlChange}/>
-            <button type="button" onClick={incNum}><MdSmartButton size={20}/></button>
+            <button type="button" onClick={incNum}>inc</button>
+            
             <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
