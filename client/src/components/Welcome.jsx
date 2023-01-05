@@ -107,7 +107,7 @@ const Welcome = () => {
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism" >
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Amount (ETH)" name="amount" type="number" value={num} handleChange={handleChange} onChange={handlChange}/>
-            <button type="button" onClick={incNum}>inc</button>
+            <button type="button" onClick={incNum}>Donate</button>
             
             <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
