@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
-
+import { MdSmartButton } from "react-icons/md";
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
@@ -32,6 +32,15 @@ const Welcome = () => {
 
     sendTransaction();
   };
+  let [num, setNum]= useState(0);
+  let incNum =()=>{
+    
+    setNum(Number(num)+1);
+    
+  };
+  let handlChange = (e)=>{
+    setNum(e.target.value);
+   }
 
   return (
     <div className="flex w-full justify-center items-center pt-16 lg:pt-20 " id="welcome">
@@ -97,7 +106,8 @@ const Welcome = () => {
           </div>
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
+            <Input placeholder="Amount (ETH)" name="amount" type="number" value={num} handleChange={handleChange} onChange={handlChange}/>
+            <button type="button" onClick={incNum}><MdSmartButton size={20}/></button>
             <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
