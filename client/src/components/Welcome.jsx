@@ -44,7 +44,7 @@ const Welcome = () => {
             The World  <br /> needs your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to  <button className="flex-initial flex-row hover:text-blue-300" onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}> <MdContentCopy /> 0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933</button>
+            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to  <button className="flex-initial flex-row hover:text-blue-300" onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}> <MdContentCopy /> <p> 0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933 </p></button>
           </p>
           {!currentAccount && (
             <button
