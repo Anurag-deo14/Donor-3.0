@@ -44,7 +44,7 @@ const Welcome = () => {
             The World  <br /> needs your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Donate crypto for the needy using Donor. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face.
+            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face.
           </p>
           {!currentAccount && (
             <button
