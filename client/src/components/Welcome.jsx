@@ -2,7 +2,7 @@ import React, { useContext,useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
-import { MdContentCopy } from "react-icons/md";
+
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
@@ -44,7 +44,7 @@ const Welcome = () => {
             The World  <br /> needs your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to <MdContentCopy /> <button className="flex-initial flex-row hover:text-blue-300" onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933</button>
+            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to <button onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933</button>
           </p>
           {!currentAccount && (
             <button
