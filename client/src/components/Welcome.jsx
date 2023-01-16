@@ -3,12 +3,14 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
+import { FiCopy } from "react-icons/fi";
+
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
-
+const text = "0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933";
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
@@ -44,7 +46,8 @@ const Welcome = () => {
             The World  <br /> needs your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to <button>0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933</button>
+            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to  <p>{text}</p> <button onClick={() => {
+         navigator.clipboard.writeText(text);}}><FiCopy /></button>
           </p>
           {!currentAccount && (
             <button
