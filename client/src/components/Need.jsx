@@ -23,7 +23,7 @@ const Need = () => (
     <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
 
     <div className="flex flex-col px-20">
-        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
+        <h1 className="text-white text-3xl sm:text-5xl py-2  ">
           Need For
           <br />
           Crypto Donation
