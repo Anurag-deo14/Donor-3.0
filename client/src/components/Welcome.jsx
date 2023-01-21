@@ -3,12 +3,15 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
+import { FiCopy } from "react-icons/fi";
+
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
+import styles from './Welcome.css'
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
-
+const text = "0x6Ea12D225cfa208EAC185717dBb7bEcf8e985933";
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
@@ -31,24 +34,29 @@ const Welcome = () => {
     setTogge(!togge);
   };
   const handleSubmit = (e) => {
-    const { addressTo, amount, keyword, message } = formData;
+    const { addressTo, num, keyword, message } = formData;
 
     e.preventDefault();
 
-    if (!addressTo || !amount || !keyword || !message) return;
+    if (!addressTo || !num || !keyword || !message) return;
 
     sendTransaction();
   };
+  
+
+  
 
   return (
     <div className="flex w-full justify-center items-center pt-16 lg:pt-20 " id="welcome">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
-          <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
-            The World  <br /> needs your Help!!
+          <h1 className="text-3xl sm:text-5xl text-white py-1 worldheader">
+            The World  <br /> Needs Your Help!!
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
             Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face.
+            Donate crypto for the needy using Cryptex. <br /> Your donations and support mean something. It means you care, and it can bring a smile to someone’s face. Give your valuable donation to <p className="hover:text-blue-300 flex space-x-2 cursor-pointer pt-2"> <p className="text-xs">{text}</p> <button onClick={() => {
+         navigator.clipboard.writeText(text);}}><FiCopy /></button> </p>
           </p>
           {!currentAccount && (
             <button
@@ -87,7 +95,7 @@ const Welcome = () => {
     }}>
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
-                <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
+                <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center" id="pay">
                   <SiEthereum fontSize={21} color="#fff" />
                 </div>
                 <BsInfoCircle fontSize={17} color="#fff" />
@@ -112,11 +120,12 @@ const Welcome = () => {
                 { toggle ?
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
+            <Input placeholder="Amount (ETH)" name="amount" type="number"  handleChange={handleChange} />
+            
             <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
-            <div className="h-[1px] w-full bg-gray-400 my-2" />
+            <div className="h-[1px] w-full bg-gray-400 my-2" /> 
 
             {isLoading
               ? <Loader />
